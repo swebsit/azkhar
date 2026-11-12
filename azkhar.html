@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#123f35"
+><title>أذكاري </title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap');
+:root{--green:#164b3c;--deep:#10372e;--mint:#e8f1eb;--gold:#c9a45b;--ink:#20362e;--muted:#77857e;--paper:#fbfaf6;--white:#fff;--line:#e8e8df;--shadow:0 12px 35px #213d2910}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans Arabic',sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer}.topbar{height:72px;background:var(--deep);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 max(5vw,20px);position:sticky;top:0;z-index:5;box-shadow:0 3px 15px #102a2030}.brand{display:flex;align-items:center;gap:12px;font-weight:700;font-size:20px}.brand-icon{width:40px;height:40px;border:1px solid #ffffff55;border-radius:50%;display:grid;place-items:center;color:#e5c67e;font-size:21px}.top-note{font-size:13px;color:#d4e3db}.layout{max-width:1140px;margin:auto;padding:40px 22px 70px}.hero{background:linear-gradient(120deg,#123f35,#225c48);border-radius:24px;padding:34px 38px;color:white;position:relative;overflow:hidden;display:flex;justify-content:space-between;align-items:center;min-height:190px}.hero:after{content:'۞';position:absolute;left:5%;top:-60px;color:#ffffff0b;font-size:260px}.hero h1{font-family:'Amiri',serif;font-size:38px;margin:0 0 8px}.hero p{margin:0;color:#d6e6dc}.datebox{background:#ffffff12;border:1px solid #ffffff28;border-radius:16px;padding:14px 18px;min-width:155px;text-align:center;z-index:1}.datebox strong{display:block;font-size:17px}.datebox span{font-size:12px;color:#d6e6dc}.section-head{display:flex;justify-content:space-between;align-items:end;margin:34px 0 16px}.section-head h2{margin:0;font-size:20px}.section-head p{margin:5px 0 0;color:var(--muted);font-size:13px}.search{position:relative}.search input{width:230px;border:1px solid var(--line);background:white;border-radius:12px;padding:10px 38px 10px 12px;outline:none}.search:before{content:'⌕';position:absolute;right:13px;top:4px;font-size:24px;color:#8b998f}.categories{display:flex;gap:10px;overflow:auto;padding:2px 0 12px;scrollbar-width:thin}.cat{white-space:nowrap;border:1px solid var(--line);border-radius:30px;padding:10px 17px;background:white;color:#54665c;font-size:14px;transition:.2s}.cat.active,.cat:hover{background:var(--green);color:white;border-color:var(--green)}.cat .ico{margin-left:7px}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.card{background:white;border:1px solid var(--line);border-radius:18px;padding:21px 22px;box-shadow:var(--shadow);transition:.2s}.card:hover{transform:translateY(-2px);box-shadow:0 15px 36px #213d2918}.card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px}.tag{background:var(--mint);color:var(--green);font-size:12px;padding:5px 11px;border-radius:20px}.delete{border:0;background:transparent;color:#9a9f99;font-size:20px}.dhikr{font-family:'Amiri',serif;font-size:23px;line-height:1.9;color:#263d33;margin:0 0 16px}.card-bottom{display:flex;align-items:center;justify-content:space-between;border-top:1px solid #f0f0eb;padding-top:14px}.count{font-size:12px;color:var(--muted)}.count b{color:var(--green)}.actions{display:flex;gap:8px;align-items:center}.repeat{border:0;background:#eaf2ec;color:var(--green);border-radius:10px;width:38px;height:38px;font-size:17px;font-weight:700}.repeat:active{transform:scale(.92)}.reset{border:1px solid var(--line);background:white;color:#8c968f;border-radius:10px;width:36px;height:36px}.empty{grid-column:1/-1;text-align:center;padding:45px;color:var(--muted);background:white;border-radius:16px}.add-panel{margin-top:36px;background:#f0f4ef;border:1px solid #e2eae2;border-radius:20px;padding:25px}.add-heading{display:flex;align-items:center;gap:12px;margin-bottom:18px}.add-symbol{width:40px;height:40px;border-radius:12px;background:var(--green);color:white;display:grid;place-items:center;font-size:24px}.add-heading h2{margin:0;font-size:19px}.add-heading p{margin:3px 0 0;color:var(--muted);font-size:13px}.form{display:grid;grid-template-columns:1fr 180px auto;gap:10px}.form textarea,.form select{border:1px solid #dfe6df;background:white;border-radius:11px;padding:12px;outline:none;color:var(--ink)}.form textarea{resize:vertical;min-height:48px}.form button{border:0;background:var(--green);color:white;border-radius:11px;padding:0 19px;font-weight:600}.form button:hover{background:var(--deep)}.privacy{font-size:12px;color:#728178;margin:13px 0 0}.footer{text-align:center;color:#849189;font-size:12px;margin-top:30px}.toast{position:fixed;bottom:24px;right:50%;transform:translate(50%,20px);opacity:0;background:#173f34;color:white;padding:11px 20px;border-radius:30px;transition:.25s;pointer-events:none;z-index:10}.toast.show{opacity:1;transform:translate(50%,0)}@media(max-width:700px){.layout{padding:22px 15px 45px}.hero{padding:25px 22px;min-height:165px}.hero h1{font-size:30px}.datebox{min-width:120px;padding:11px}.top-note{display:none}.section-head{align-items:center}.search input{width:155px}.cards{grid-template-columns:1fr}.card{padding:17px}.dhikr{font-size:21px}.form{grid-template-columns:1fr}.form button{padding:12px}.add-panel{padding:19px}.datebox strong{font-size:14px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+
+
+</head>
+
+
+
+<body>
+    <header class="topbar">
+        <div class="brand">
+            <span class="brand-icon">۞</span>
+            <span>أذكاري</span></div>
+            <div class="top-note">لحظاتٌ من السكينة في زحام يومك</div>
+    </header>
+<main class="layout">
+    <section class="hero">
+           <div><h1>السلامُ لقلبك 🤍</h1>
+        <p>اجعل لسانك رطبًا بذكر الله، وابدأ يومك بالطمأنينة.</p>
+    </div><div class="datebox"><strong id="today"></strong>
+        <span>يومٌ جديد، وذكرٌ جميل</span></div>
+    </section>
+<div class="section-head">
+    <div><h2>وردك اليومي</h2>
+        <p>اختر الذكر وكرّره، ولكل ذكر عدّاده الخاص</p></div>
+        <label class="search"><input id="search" type="search" placeholder="ابحث عن ذكر...">
+        </label></div>
+<nav class="categories" id="categories" aria-label="تصنيفات الأذكار">
+
+</nav>
+
+<section class="cards" id="cards" aria-live="polite">
+
+</section>
+<section class="add-panel"><div class="add-heading">
+    <span class="add-symbol">＋</span>
+    <div><h2>أضف ذكرًا إلى قائمتك</h2>
+        <p>أضف الأذكار التي تحبها وارجع إليها متى شئت</p></div></div>
+        <form class="form" id="addForm"><textarea id="newText" required maxlength="600" placeholder="اكتب الذكر هنا...">
+            
+        </textarea><select id="newCategory" aria-label="تصنيف الذكر"></select><button type="submit">＋ أضف الذكر</button></form><p class="privacy">🔒 تُحفظ أذكارك وإضافاتك على هذا الجهاز تلقائيًا، حتى بعد إغلاق المتصفح.</p></section><footer class="footer">Dev : sedra-taib
+
+        </footer></main><div class="toast" id="toast"></div>
+<script>
+const categories=[['الكل','✦'],['الصباح','☀'],['المساء','☾'],['الليل','☽'],['بعد الصلاة','☷'],['أذكار عامة','❋'],['أذكاري','♡']];
+const defaults=[
+{text:'أَصْبَحْنا وأَصْبَحَ المُلكُ لله، والحمدُ لله، لا إلهَ إلا اللهُ وحدَه لا شريكَ له، له المُلكُ وله الحمدُ وهو على كلِّ شيءٍ قدير.',cat:'الصباح',repeat:1},
+{text:'اللهمَّ بكَ أصبحنا، وبكَ أمسينا، وبكَ نحيا، وبكَ نموتُ، وإليكَ النشور.',cat:'الصباح',repeat:1},
+{text:'أَصْبَحْنا على فِطرةِ الإسلام، وعلى كلمةِ الإخلاص، وعلى دينِ نبيِّنا محمدٍ ﷺ، وعلى مِلَّةِ أبينا إبراهيمَ حنيفًا مسلمًا وما كان من المشركين.',cat:'الصباح',repeat:1},
+{text:'اللهمَّ أنتَ ربِّي لا إلهَ إلا أنت، خلقتَني وأنا عبدُك، وأنا على عهدِك ووعدِك ما استطعت، أعوذُ بك من شرِّ ما صنعت، أبوءُ لك بنعمتك عليَّ، وأبوءُ بذنبي فاغفرْ لي، فإنه لا يغفرُ الذنوبَ إلا أنت.',cat:'الصباح',repeat:1},
+{text:'رضيتُ باللهِ ربًّا، وبالإسلامِ دينًا، وبمحمدٍ ﷺ نبيًّا.',cat:'الصباح',repeat:3},
+{text:'بسمِ اللهِ الذي لا يضرُّ مع اسمِه شيءٌ في الأرضِ ولا في السماءِ وهو السميعُ العليم.',cat:'الصباح',repeat:3},
+{text:'سُبحانَ اللهِ وبحمدِه.',cat:'الصباح',repeat:100},
+{text:'أعوذُ بكلماتِ اللهِ التامَّاتِ من شرِّ ما خلق.',cat:'المساء',repeat:3},
+{text:'أمسينا وأمسى المُلكُ لله، والحمدُ لله، لا إلهَ إلا اللهُ وحدَه لا شريكَ له، له المُلكُ وله الحمدُ وهو على كلِّ شيءٍ قدير.',cat:'المساء',repeat:1},
+{text:'اللهمَّ بكَ أمسينا، وبكَ أصبحنا، وبكَ نحيا، وبكَ نموتُ، وإليكَ المصير.',cat:'المساء',repeat:1},
+{text:'رضيتُ باللهِ ربًّا، وبالإسلامِ دينًا، وبمحمدٍ ﷺ نبيًّا.',cat:'المساء',repeat:3},
+{text:'اللهمَّ قِني عذابَك يومَ تبعثُ عبادَك.',cat:'الليل',repeat:3},
+{text:'باسمِكَ اللهمَّ أموتُ وأحيا.',cat:'الليل',repeat:1},
+{text:'آيةُ الكرسي: اللهُ لا إلهَ إلا هو الحيُّ القيومُ لا تأخذُه سِنةٌ ولا نومٌ له ما في السماواتِ وما في الأرضِ من ذا الذي يشفعُ عنده إلا بإذنه يعلمُ ما بين أيديهم وما خلفهم ولا يحيطون بشيءٍ من علمه إلا بما شاء وسع كرسيُّه السماواتِ والأرضَ ولا يؤودُه حفظُهما وهو العليُّ العظيم.',cat:'الليل',repeat:1},
+{text:'أستغفرُ اللهَ (ثلاثًا)، اللهمَّ أنتَ السلامُ ومنكَ السلامُ، تباركتَ يا ذا الجلالِ والإكرام.',cat:'بعد الصلاة',repeat:1},
+{text:'سُبحانَ اللهِ، والحمدُ لله، واللهُ أكبر.',cat:'بعد الصلاة',repeat:33},
+{text:'لا إلهَ إلا اللهُ وحدَه لا شريكَ له، له المُلكُ وله الحمدُ وهو على كلِّ شيءٍ قدير.',cat:'بعد الصلاة',repeat:1},
+{text:'اللهمَّ أعنِّي على ذِكرِك وشُكرِك وحُسنِ عبادتِك.',cat:'بعد الصلاة',repeat:1},
+{text:'لا حولَ ولا قوَّةَ إلا بالله.',cat:'أذكار عامة',repeat:1},
+{text:'اللهمَّ صلِّ وسلِّم على نبيِّنا محمد.',cat:'أذكار عامة',repeat:10},
+{text:'سُبحانَ اللهِ العظيمِ وبحمدِه.',cat:'أذكار عامة',repeat:1},
+{text:'اللهمَّ إنِّي أسألُك العفوَ والعافيةَ في الدنيا والآخرة.',cat:'أذكار عامة',repeat:1}
+];
+const key='adhkari_v1';let saved;try{saved=JSON.parse(localStorage.getItem(key)||'{}')}catch{saved={}};let userItems=Array.isArray(saved.user)?saved.user:[];let counts=saved.counts||{};let active='الكل';let query='';
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));function persist(){localStorage.setItem(key,JSON.stringify({user:userItems,counts}))}function all(){return [...defaults.map((x,i)=>({...x,id:'d'+i,custom:false})),...userItems.map(x=>({...x,custom:true}))]}
+function renderCats(){document.getElementById('categories').innerHTML=categories.map(([c,ico])=>`<button class="cat ${active===c?'active':''}" data-cat="${esc(c)}"><span class="ico">${ico}</span>${esc(c)}</button>`).join('')}
+function render(){renderCats();let list=all().filter(x=>(active==='الكل'||(active==='أذكاري'?x.custom:x.cat===active))&&x.text.includes(query));const root=document.getElementById('cards');if(!list.length){root.innerHTML='<div class="empty">لا توجد أذكار مطابقة. جرّب كلمة أخرى أو أضف ذكرًا جديدًا.</div>';return}root.innerHTML=list.map(x=>{let n=Number(counts[x.id]||0);return `<article class="card"><div class="card-top"><span class="tag">${x.custom?'أذكاري':esc(x.cat)}</span>${x.custom?`<button class="delete" title="حذف الذكر" aria-label="حذف الذكر" data-delete="${esc(x.id)}">×</button>`:''}</div><p class="dhikr">${esc(x.text)}</p><div class="card-bottom"><span class="count">التكرار: <b>${n}</b> / ${x.repeat}</span><div class="actions"><button class="reset" title="تصفير العداد" aria-label="تصفير العداد" data-reset="${esc(x.id)}">↺</button><button class="repeat" title="سبّح" aria-label="زيادة العداد" data-count="${esc(x.id)}">＋</button></div></div></article>`}).join('')}
+document.getElementById('categories').addEventListener('click',e=>{let b=e.target.closest('[data-cat]');if(b){active=b.dataset.cat;render()}});document.getElementById('search').addEventListener('input',e=>{query=e.target.value.trim();render()});document.getElementById('cards').addEventListener('click',e=>{let b=e.target.closest('button');if(!b)return;if(b.dataset.count){counts[b.dataset.count]=(Number(counts[b.dataset.count])||0)+1;persist();render()}if(b.dataset.reset){counts[b.dataset.reset]=0;persist();render()}if(b.dataset.delete){userItems=userItems.filter(x=>x.id!==b.dataset.delete);delete counts[b.dataset.delete];persist();render();toast('تم حذف الذكر')}});
+const select=document.getElementById('newCategory');select.innerHTML=categories.slice(1,-1).map(([x])=>`<option>${esc(x)}</option>`).join('');document.getElementById('addForm').addEventListener('submit',e=>{e.preventDefault();const text=document.getElementById('newText').value.trim();if(!text)return;userItems.push({id:'u'+Date.now().toString(36)+Math.random().toString(36).slice(2,6),text,cat:select.value,repeat:1});persist();document.getElementById('newText').value='';active='أذكاري';query='';document.getElementById('search').value='';render();toast('تم حفظ الذكر على هذا الجهاز')});function toast(msg){let el=document.getElementById('toast');el.textContent=msg;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),2200)}
+const now=new Date();document.getElementById('today').textContent=new Intl.DateTimeFormat('ar',{weekday:'long',day:'numeric',month:'long'}).format(now);render();
+</script></body></html>
